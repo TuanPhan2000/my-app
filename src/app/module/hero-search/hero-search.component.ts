@@ -8,6 +8,7 @@ import {
 
 import { Hero } from '../../models/hero';
 import { HeroService } from '../../service/hero.service';
+import {HeroesComponent} from "../heroes/heroes.component";
 
 @Component({
   selector: 'app-hero-search',
