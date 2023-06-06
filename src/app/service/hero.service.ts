@@ -58,14 +58,11 @@ export class HeroService {
   }
 
   searchHeroes(term: string): Observable<Hero[]> {
-    if (!term.trim()) {
+    if (!term.trim() || !Data.heroes) {
       // if not search term, return empty hero array.
       return of([]);
     }
-    if (Data.heroes) {
       return of(Data.heroes.filter(h => h.name.includes(term)));
-    }
-    return of([]);
   }
 
 
